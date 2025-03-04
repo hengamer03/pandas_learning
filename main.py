@@ -9,8 +9,7 @@ df.columns = ["Category", "2024", "4_kvartal_2024"]
 #invert the way the dataset is siplayed
 df_pivot = df.set_index("Category").T
 
-# print the new dataset
-print(df_pivot)
+df_pivot.loc["2024", "Døde"] = "99999"
 
 # Print out the Døde column
 print(df_pivot["Døde"])
